@@ -1,0 +1,14 @@
+tr:nth-child(odd)
+{
+    background-color: darkblue;
+}
+
+tr:nth-child(even)
+{
+    background-color: lightblue;
+}
+
+
+
+
+

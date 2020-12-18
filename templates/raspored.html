@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+                <script src=" {{url_for('static',filename = 'js/jquery-3.4.1.min.js')}}" ></script>
+  
+    <script>
+        $(document).ready(function () {
+            $("#unos").keyup(function () {
+                var value = $("#unos");
+                value = value.val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                 });
+            });
+        });
+ 
+       
+     </script>
+ 
+    <title>Document</title>
+</head>
+<body>
+    <h2>Danijela Bulovic S2/17</h2>
+    Pretraga: <input type="text" id="unos">
+ 
+    
+  
+
+<style>
+    td{
+        
+        width:450px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+
+}
+
+
+    
+
+</style>
+
+<table>
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Predmet</th>
+<th>Tip</th>
+<th>Nastavnik</th>
+<th>Grupe</th>
+<th>Dan</th>
+<th>Termin</th>
+<th>Vreme</th>
+
+</tr>
+
+</thead>
+
+<tbody id="myTable">
+
+{%for row in data%}
+
+<tr>
+  
+    <td >{{row[0]}}</td>
+    <td>{{row[1]}}</td>
+    <td >{{row[2]}}</td>
+    <td >{{row[3]}}</td>
+    <td >{{row[4]}}</td>
+    <td >{{row[5]}}</td>
+    <td >{{row[6]}}</td>
+    <td >{{row[7]}}</td>
+
+
+</tr>
+
+
+{%endfor%}
+
+
+</tbody>
+
+
+</table>
+<div style="float: left;">
+<p><b>Nastavnici</b></p>      
+
+<p>Al Hakan Alya</p>                                  
+<p>Antonijevic Rados</p>                                                    
+<p>Arsenijevic Ognjen</p>                                                   
+<p>Babic Djorjde</p>                                                        
+<p>Bojovic Petar</p>                                                        
+<p>Ciganovic Igor</p>                                                       
+<p>Cosovic Filip</p>                                                        
+<p>Cuk Bojana</p>                                                                                                         
+<p>Dimic Surla Bojana</p>                                                   
+<p>Djuric Milan</p>                                                         
+<p>Djuricic Ana</p>                                                         
+<p>Elezovic Ivan</p>                                                        
+<p>Eskobar Dobrijevic Katarina</p>                                          
+<p>Galic Luka</p>                                                           
+<p>Gardasevic Filipovic Milanka</p>                                         
+<p>Hadzi Ristic Filip</p>                                                   
+<p>Ilic Nemanja</p>                                                         
+<p>Ivanovic Jovana</p>                                                      
+<p>Jankovski Ivan</p>                                                       
+<p>Jelic Lazar</p>                                                          
+<p>Jerotijevic MarijaJonjic Teodora</p>                                     
+<p>Jovanovic Irena</p>                                                      
+<p>Jovanovic Jelena</p>                                                     
+<p>Karbunar Lazar</p>
+<p>Kokic Ivan</p>
+<p>Kokic Natalija</p>
+<p>Kostadinovic Miodrag</p>
+<p>Lale Sinisa</p>
+<p>Lazic Ljubomir</p>
+<p>Lutovac Maja</p>
+<p>Malesevic Nenad </p>
+<p>Mandic Dejana</p>
+<p>Manojlovic Miodrag</p>
+<p>Manojlovic Miodrag, Ognjanovic Ivana</p>
+<p>Maric Nevena</p>
+<p>Markovic Ana</p>
+<p>Martic Goran</p>
+<p>Masulovic Dragan</p>
+<p>Micic Aleksandar</p>
+<p>Mijatovic Igor</p>
+<p>Milinkovic Stevan</p>
+<p>Milojkovic Branislav</p>
+<p>|Milosavljevic Milos</p>
+<p>Milovic Njegovan</p>
+<p>Milunovic Milos</p>
+<p>Milutinovic Dragoslav</p>
+<p>Mirkovic Bogdan</p>
+<p>Perisic Branko</p>
+<p>Pilipovic Dragoljub</p>
+<p>Popovic Snezana</p>
+<p>Prvulovic Petar</p>
+<p>Radenkovic Milos</p>
+<p>Radivojevic Mirjana</p>
+<p>Radosavljevic Nemanja</p>
+<p>Radovic Mihailo</p>
+<p>Radulovic Natasa</p>
+<p>Rakocevic Goran</p>
+<p>Rankovic Dragica</p>
+<p>Rankovic Nevena</p>
+<p>Redzic Nikola Jovan</p>
+<p>Rubil Goran</p>
+<p>Sijacic Dusan</p>
+<p>Spasic Nikola</p>
+<p>Stambolovic Bogdana</p>
+<p>Stankovic Maja</p>
+<p>Stanojevic Mladen</p>
+<p>Stetin Darko</p>
+<p>Stojanovic Danica</p>
+<p>Stojanovic Visnja</p>
+<p>Subotic Silvija</p>
+<p>Tanasic Slobodan</p>
+<p>Tesic Nemanja</p>
+<p>Tomic Milan</p>
+<p>Topuzovic Filip</p>
+<p>Urosevic Dragan</p>
+<p>Vasiljevic Jelena</p>
+<p>Veniger Marko</p>
+<p>Vesovic Marko</p>
+<p>Vidakovic Milan</p>
+<p>Vranes Nikolina</p>
+<p>Vrbica-Matejic Vera</p>
+<p>Vucicevic Nemanja</p>
+<p>Vujosevic Dusan</p>
+<p>Vukotic Selena</p>
+<p>Zdravkovic Tamara</p>
+<p>Zivkovic Stefan</p>
+
+</div>
+<div>
+<p><b>Ucionica</b>
+
+<br>
+    Atelje BB [Kirovljeva, Banovo Brdo] <br>
+    Atelje KM [K. Mihailova 10, VIII sprat] <br>
+    CET 1 [] <br>
+    Foto studio [K. Mihailova 10, VIII sprat] <br>
+    Foto studio BB [Kirovljeva, Banovo Brdo] <br>
+    Kolarac 1 [Studentski trg 5] <br>
+    Kolarac 2 [Studentski trg 5] <br>
+    Kolarac 3 [Studentski trg 5] <br>
+    RAF 1 [VI sprat] <br>
+    Raf 11 [III sprat] <br>
+    Raf 14 [K. Mihailova 10, VIII sprat] <br>
+    Raf 18 [VIII sprat]  <br>
+    Raf 2 [VI sprat] <br>
+    Raf 3 [VI sprat] <br>
+    Raf 4 [VI sprat] <br>
+    Raf 5 [VI sprat] <br>
+    Raf 6 [VI sprat] <br>
+    Raf 7 [VI sprat] <br>
+    Raf 8 [III sprat] <br>
+    Rg 1 [VI sprat] <br>
+    Rg 2 [VI sprat] <br>
+    Rg 4 [VI sprat] <br>
+    Rg 6 [VI sprat] <br>
+    Rg 7 [VI sprat] <br>
+    
+    
+    
+    
+    
+
+
+
+
+
+
+</p>   
+
+</div>
+
+
+
+</body>
+</html>
